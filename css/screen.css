@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
+    cursor: inherit;
 }
 :root {
     --AnimationNewsScaleStart: 1;
@@ -34,8 +35,7 @@ h2:focus{
 
 @keyframes gadgetHover {
     from {
-        
-        
+        translate: 0 0;
     }
     to {
         translate: 0 -2vh;
@@ -45,9 +45,10 @@ h2:focus{
 }
 @keyframes gadgetHover-off{
     from{
-        transform: scale(var(--AnimationNewsScaleStop));
-    }to {
-        transform: scale(var(--AnimationNewsScaleStart));
+        translate: 0 -2vh;
+        position: relative;
+    } to {
+        translate: 0 0;
     }
 }
 
@@ -82,7 +83,7 @@ body {
     background-size: cover;
 }
 
-/*Back to top*/
+/*-------------------Back to top -----------------(preso da internet e modificato)*/
 
 .Btn {
     z-index: 999;
@@ -465,12 +466,10 @@ footer.main img {
     transform: scale(var(--AnimationNewsScaleStop));
     z-index: 999;
 }
-
 .newsBox h2{
     font-size: 5vh;
     text-align: center;
 }
-
 .newsBox img{
     border-bottom: rgb(6, 136, 183) 2px solid ;
     width: 100%;
@@ -487,7 +486,6 @@ footer.main img {
     background-color: #986d227d;
     width: 100%;
 }
-
 .story div[id="popUp"]{
     background-color: rgb(27, 158, 158);
     width: 50%;
@@ -500,7 +498,6 @@ footer.main img {
     border-bottom-left-radius: 8vh;
 
 }
-
 .story div[id="Buttons"]{
     
     position: absolute;
@@ -508,18 +505,15 @@ footer.main img {
     margin: auto auto 3% 3%;   
     display: inline;
 }
-
 .story div[id="Buttons"] button.cssbuttons-io {
         width: 8vh;
         height: 8vh;
 }
-
 .story h2{
     margin: var(--StoryTextMargin);
     font-size: 6vh;
     
 }
-
 .story p{
     margin: var(--StoryTextMargin);
     font-size: 4vh;
@@ -529,7 +523,7 @@ footer.main img {
 .gadgetsBox {
     position: relative;
     
-    background-image: url(../imgs/Background/bg-Gatget.jpg);
+    background-image: url(../imgs/Background/bg.jpg);
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -547,25 +541,21 @@ footer.main img {
 }
 
 .gadgets li{
-    overflow: auto;    
     width: 30vw;
     height: 30vh;
     background-color: azure;
-    -webkit-animation: newsHover-off var(--AnimationNewsScaleTime)
+    
 }
 
 .gadgets li img{
-    width: 100%;
-
-    size: cover;
+    size: auto;
+    -webkit-animation: gadgetHover-off var(--AnimationNewsScaleTime)
 }
 
 .gadgets li:hover img {
-    
     animation: gadgetHover var(--AnimationNewsScaleTime);
-    
+    translate: 0 -2vh;
     position: relative;
-    position: -2vh;
 }
 
 
@@ -574,15 +564,18 @@ footer.main img {
 .centerCirca {
     padding: 5vh 7vw 15vh 7vw;
 }
+
 ul.boList {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10vh;
 }
+
 ul.boList li {
     background-color: azure;
 }
+
 ul.boList li:nth-child(even) img {
     float: left;
     width: 40vw;
