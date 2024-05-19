@@ -512,7 +512,7 @@ ul.boList li {
 }
 ul.boList li img {
     width: 40vw;
-    height: 50vh;
+    min-height: 50vh;
     object-fit: cover;
     scale: 1.1;
 }
