@@ -58,6 +58,10 @@
     font-family: textFont;
     src: url(./fonts/Roboto-Regular.ttf);
 }
+@font-face {
+    font-family: countFont;
+    src: url(./fonts/Action\ Comics\ Black.ttf);
+}
 
 #index-d1 {
     top: -10vh;
@@ -601,13 +605,17 @@ span.cartCount {
     z-index: 100000;
 
     position: relative;
-    top: -1.5vh;
-    left: -1vw;
+    top: -1.7vh;
+    left: -1.6vw;
 
-    color: ;
+    font-family: countFont;
+    color: #44ea76;
+    text-shadow: 0.1vw 0.2vh 0.3vh black;
 
-    font-family: titleFont;
-    font-size: 1.5vh;
+    font-size: 1.3vh;
+}
+.miniBuy#cartZone span.cartCount {
+    font-size: 2vh;
 }
 
 /* PopUp */
@@ -619,7 +627,7 @@ span.cartCount {
     width: 100%;
     height: 100vh;
 }
-.buttonPopUp iframe {
+.buttonPopUp div#content, .buttonPopUp iframe {
     margin: 10vh 12% 10vh 12%;
     width: 76%;
     height: 80vh;
@@ -627,6 +635,7 @@ span.cartCount {
     border: 0.3vw solid gray;
     box-shadow: 0px 0px 10vw;
 }
+
 .buttonPopUp button.cssbuttons-io {
     width: 8vh;
     height: 8vh;
@@ -635,4 +644,73 @@ span.cartCount {
     position: absolute;
     right: 2vw;
     top: 2vh;
+}
+
+.buyConfirm div#content {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--textBg);
+}
+
+.buyConfirm div#content div {
+    display: inline-block;
+    height: 80vh;
+    width: 100%;
+
+    /*border: 10px solid red;*/
+}
+
+.buyConfirm div#content div:nth-child(1) {
+    border-right: 0.3vw solid rgb(6, 136, 183);
+    
+    background-color: azure;
+    border-top-left-radius: 5.5vh;
+    border-bottom-left-radius: 5.5vh;
+}
+.buyConfirm div#content div:nth-child(2) {
+    background-color: #12b9c2;
+    border-top-right-radius: 5.5vh;
+    border-bottom-right-radius: 5.5vh;
+}
+.buyConfirm form {
+    height: 40vh;
+    margin: 18vh 3vw 22vh 2vw;
+    padding: 2vh 1vw 1vh 1vw;
+    background-color: #a62cd6e4;
+}
+.buyConfirm fieldset {
+    border: 0px
+}
+
+.buyConfirm input, .buyConfirm button {
+    display: inline-block;
+    margin: 0.2vw;
+    font-size: 2vh;
+    padding: 0.5vh 1vw 0.5vh 1vw;
+    border-radius: 6vh;
+}
+.buyConfirm label {
+    float: left;
+    /*overflow: show;*/
+    height: 1px;
+}
+
+.buyConfirm input[name="creditCardNumber"] {
+    width: 29.5vw;
+}
+.buyConfirm input[name="ccv"] {
+    width: 2.9vw;
+}
+.buyConfirm input[name="outDate"] {
+    margin-left: 14.8vw;
+    width: 9.2vw
+}
+.buyConfirm button {
+    position: absolute;
+    bottom: 28.5vh;
+    right: 26.5vw;
+
+    font-family: titleFont;
+    padding: 0vh 0.8vw 0vh 0.7vw;
+    box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0, 0, 0, 0.858);
 }

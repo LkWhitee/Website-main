@@ -24,11 +24,38 @@
     </header>
     <main>
 
-        <section id="cartPopUp" class="buttonPopUp" style="display: none">
-            <div class="buttonContainer">
-                <button class="cssbuttons-io" onclick="onlick()"><span>X</span></button>
+        <section id="confirmBuy" class="buttonPopUp buyConfirm" style="display: block">
+            <div id="content">
+                <div>
+                    <ul>
+                        <li style="font-size: 100px;">
+                            Vado via torno fra poco, fai il commit!!!
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form action="" method="get" class="box">
+                        <fieldset>
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Antonio">
+                            <label for="surname">Cognome</label>
+                            <input type="text" id="surname" name="surname" placeholder="Masiero">
+                            <label for="bornDate">Data di nascita</label>
+                            <input type="date" id="bornDate" name="bornDate">
+                            <label for="address">Indirizzo</label>
+                            <input type="text" id="address" name="address" placeholder="via Roma">
+                            
+                            <label for="creditCardNumber">Numero di carta</label>
+                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="XXXX-XXXX-XXXX-XXXX">
+                            <label for="ccv">CVV</label>
+                            <input type="text" id="ccv" name="ccv" placeholder="XXX">
+                            <label for="outDate">Data di scadenza</label>
+                            <input type="date" id="outDate" name="outDate">
+                            <button type="submit"> COMPRA </button>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
-            <iframe src="../pages/MiniBuy.html"></iframe>
         </section>
 
         <section id="games" class="bg">
