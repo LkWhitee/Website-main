@@ -2,8 +2,9 @@ let popUpTrailer = document.getElementById('TrailerPopUp')
 let openTrailer = false
 let popUpBuy = document.getElementById('buyPopUp')
 let openBuy = false
-
 let pages = 1
+
+
 
 function nextPage() {
     if (pages < 4){

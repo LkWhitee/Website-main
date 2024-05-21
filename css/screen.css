@@ -596,6 +596,20 @@ button.cartButton.cssbuttons-io::before {
     background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
 }
 
+span.cartCount {
+    float: right;
+    z-index: 100000;
+
+    position: relative;
+    top: -1.5vh;
+    left: -1vw;
+
+    color: ;
+
+    font-family: titleFont;
+    font-size: 1.5vh;
+}
+
 /* PopUp */
 .buttonPopUp {
     z-index: 10000;

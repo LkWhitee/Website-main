@@ -1,8 +1,10 @@
 let product = new Map()
-let countingPopUpli = document.getElementById("countingPopUpli")
-let countingPopUpp = document.getElementById("countingPopUpp")
-let count = 0
+let cookie = document.cookie
+let countingPopUpli = document.getElementById("countingPopUp")
+let count = ""
 let boolBuyPhase = true
+ 
+updateCount()
 
 function onlick(){
     let buyPhase = document.getElementById("cartPopUp")
@@ -16,13 +18,18 @@ function onlick(){
 }
 
 function updatePopUp() {
-    countingPopUpp.innerHTML = count 
+    countingPopUpli.innerHTML = count 
 }
 
 function updateCount(){
     count = 0
     product.keys().forEach(foreachs);
-    countingPopUpp.innerHTML = count
+    
+    function foreachs(item) {
+        count += product.get(item);
+    }
+    
+    countingPopUpli.innerHTML = count
 
     if(count != 0){
         countingPopUpli.style.display = "block"
@@ -31,9 +38,7 @@ function updateCount(){
     }
 }
 
-function foreachs(item) {
-    count += product.get(item);
-  }
+
 
 function addProduct1() {
     if (!product.has("product1")){
