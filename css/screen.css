@@ -336,7 +336,7 @@ hr.simple {
 
 .text {
     font-family: textFont, Arial, Helvetica, sans-serif;
-    text-align: justify;
+    text-align: left;
     font-size: 3vh;
 }
 

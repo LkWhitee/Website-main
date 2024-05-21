@@ -9,7 +9,71 @@
 <body>
     <main>
         <section id="cartZone" class="box miniBuy">
-            <button class="cssbuttons-io cartButton" lang="en"><span>Cart</span></button><span id="countingPopUp" style="display: block;" class="cartCount"></span>
+            <button class="cssbuttons-io cartButton" onclick="onlick()" lang="en"><span>Cart</span></button><span id="countingPopUp" style="display: block;" class="cartCount"></span>
+        </section>
+
+        <section id="confirmBuy" class="buttonPopUp" style="display: none">
+            <div class="buttonContainer">
+                <button class="cssbuttons-io" onclick="onlick()"><span>X</span></button>
+            </div>
+
+            <div id="content" class="buyConfirm">
+                <div>
+                    <h2 class="title" lang="en">YOUR CART</h2>
+                    <ul class="orderedList">
+                        <li id="buyCrash1">
+                            <img src="./../imgs/CrashGames/crash1.jpeg" alt="Crash Bandicoot 1" class="box">
+                            <h3 class="text">Crash Bandicoot 1</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash1', this.value)" type="number" id="countCrash1" name="countCrash1" min="0" max="99">
+                        </li>
+                        <li id="buyCrash2">
+                            <img src="./../imgs/CrashGames/crash2.jpg" alt="Crash Bandicoot 2" class="box">
+                            <h3 class="text">Crash Bandicoot 2</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash2', this.value)" type="number" id="countCrash2" name="countCrash2" min="0" max="99">
+                        </li>
+                        <li id="buyCrash3">
+                            <img src="./../imgs/CrashGames/crash3.jpg" alt="Crash Bandicoot 3" class="box">
+                            <h3 class="text">Crash Bandicoot 3</h3>
+                            <h4>Quantità:</h4><input class="quantitySelector" onchange="valueChange('countCrash3', this.value)" type="number" id="countCrash3" name="countCrash3" min="0" max="99">
+                        </li>
+                        <li id="buyCrashRemastered">
+                            <img src="./../imgs/CrashGames/crashTrilogy.avif" alt="Crash Bandicoot Remastered" class="box">
+                            <h3 class="text">Crash Bandicoot N.Sane Trilogy</h3>
+                            <h4>Quantità:</h4> <input id="countCrashRemastered" class="quantitySelector" onchange="valueChange('countCrashRemastered', this.value)" type="number"  name="countCrashRemastered" min="0" max="99">
+                        </li>
+                        <li id="buyCrash4">
+                            <img src="./../imgs/CrashGames/crash4.jpg" alt="Crash Bandicoot 4" class="box">
+                            <h3 class="text">Crash Bandicoot 4</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash4', this.value)" type="number" id="countCrash4" name="countCrash4" min="0" max="99" >
+                        </li>
+                    </ul>
+                    <p>
+                        Totale: <span id="total">1000</span>
+                    </p>
+                </div>
+                <div>
+                    <form action="" method="get" class="box">
+                        <fieldset>
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" placeholder="Antonio">
+                            <label for="surname">Cognome</label>
+                            <input type="text" id="surname" name="surname" placeholder="Masiero">
+                            <label for="bornDate">Data di nascita</label>
+                            <input type="date" id="bornDate" name="bornDate">
+                            <label for="address">Indirizzo</label>
+                            <input type="text" id="address" name="address" placeholder="via Roma">
+                            
+                            <label for="creditCardNumber">Numero di carta</label>
+                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="XXXX-XXXX-XXXX-XXXX">
+                            <label for="ccv">CVV</label>
+                            <input type="text" id="ccv" name="ccv" placeholder="XXX">
+                            <label for="outDate">Data di scadenza</label>
+                            <input type="date" id="outDate" name="outDate">
+                            <button type="submit"> COMPRA </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <hr class="simple">
