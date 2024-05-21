@@ -587,6 +587,13 @@ button.cssbuttons-io.buyButton span {
     height: 8vh;
 }
 
+button.cartButton.cssbuttons-io {
+    background: linear-gradient(to top, #9b20cc, rgb(107, 0, 173));
+}
+button.cartButton.cssbuttons-io::before {
+    background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
+}
+
 /* --------------- Story Page --------------*/
 section.Story-Story {
     padding: 10vh 10% 20vh 10%;
