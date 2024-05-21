@@ -24,14 +24,42 @@
     </header>
     <main>
 
-        <section id="confirmBuy" class="buttonPopUp buyConfirm" style="display: block">
-            <div id="content">
+        <section id="confirmBuy" class="buttonPopUp" style="display: none">
+            <div class="buttonContainer">
+                <button class="cssbuttons-io" onclick="onlick()"><span>X</span></button>
+            </div>
+
+            <div id="content" class="buyConfirm">
                 <div>
-                    <ul>
-                        <li style="font-size: 100px;">
-                            Vado via torno fra poco, fai il commit!!!
+                    <h2 class="title" lang="en">YOUR CART</h2>
+                    <ul class="orderedList">
+                        <li id="buyCrash1">
+                            <img src="./../imgs/CrashGames/crash1.jpeg" alt="Crash Bandicoot 1" class="box">
+                            <h3 class="text">Crash Bandicoot 1</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash1', this.value)" type="number" id="countCrash1" name="countCrash1" min="0" max="99">
+                        </li>
+                        <li id="buyCrash2">
+                            <img src="./../imgs/CrashGames/crash2.jpg" alt="Crash Bandicoot 2" class="box">
+                            <h3 class="text">Crash Bandicoot 2</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash2', this.value)" type="number" id="countCrash2" name="countCrash2" min="0" max="99">
+                        </li>
+                        <li id="buyCrash3">
+                            <img src="./../imgs/CrashGames/crash3.jpg" alt="Crash Bandicoot 3" class="box">
+                            <h3 class="text">Crash Bandicoot 3</h3>
+                            <h4>Quantità:</h4><input class="quantitySelector" onchange="valueChange('countCrash3', this.value)" type="number" id="countCrash3" name="countCrash3" min="0" max="99">
+                        </li>
+                        <li id="buyCrashRemastered">
+                            <img src="./../imgs/CrashGames/crashTrilogy.avif" alt="Crash Bandicoot Remastered" class="box">
+                            <h3 class="text">Crash Bandicoot N.Sane Trilogy</h3>
+                            <h4>Quantità:</h4> <input id="countCrashRemastered" class="quantitySelector" onchange="valueChange('countCrashRemastered', this.value)" type="number"  name="countCrashRemastered" min="0" max="99">
+                        </li>
+                        <li id="buyCrash4">
+                            <img src="./../imgs/CrashGames/crash4.jpg" alt="Crash Bandicoot 4" class="box">
+                            <h3 class="text">Crash Bandicoot 4</h3>
+                            <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash4', this.value)" type="number" id="countCrash4" name="countCrash4" min="0" max="99" >
                         </li>
                     </ul>
+                    
                 </div>
                 <div>
                     <form action="" method="get" class="box">
@@ -131,7 +159,6 @@
     </footer>
 
     <script src="../js/BackToTheTop.js"></script>
-    <script src="../js/buy.js"></script>
     <script src="../js/buy.js"></script>
 </body>
 </html>

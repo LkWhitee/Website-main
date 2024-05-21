@@ -1,20 +1,30 @@
-let product = new Map()
-let cookie = document.cookie
-let countingPopUpli = document.getElementById("countingPopUp")
-let count = ""
+let product = {"countCrash1": 0, "countCrash2": 0, "countCrash3": 0, "countCrashRemastered": 0, "countCrash4": 0}
+let count = 0
 let boolBuyPhase = true
- 
-updateCount()
 
-function setCookie(cname, cvalue, exdays) { 
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-  }
+
+function valueChange(id, values){
+    product[id] = values
+    updateCount()
+}
+function setQuantity(){
+    console.log("\t-----")
+    setQuantityId("countCrash1")
+    setQuantityId("countCrash2")
+    setQuantityId("countCrash3")
+    setQuantityId("countCrashRemastered")
+    setQuantityId("countCrash4")
+    console.log("\t-----")
+}
+
+function setQuantityId(x){
+    let crash = document.getElementById(x);
+    console.log(x + " " + product[x] + " " + crash);
+    if (crash) { crash.value = Number(product[x]);}
+}
 
 function onlick(){
-    let buyPhase = document.getElementById("cartPopUp")
+    let buyPhase = document.getElementById("confirmBuy")
     if (boolBuyPhase){
         buyPhase.style.display = "block"
         boolBuyPhase = false
@@ -22,24 +32,22 @@ function onlick(){
         buyPhase.style.display = "none"
         boolBuyPhase = true
     }
+    setQuantity()
 }
 
-function updatePopUp() {
-    countingPopUpli.innerHTML = count 
-}
 
 function updateCount(){
     count = 0
-    product.keys().forEach(foreachs);
-    
-    function foreachs(item) {
-        count += product.get(item);
-    }
-    
-    countingPopUpli.innerHTML = count
+    count += Number(product["countCrash1"])
+    count += Number(product["countCrash2"])
+    count += Number(product["countCrash3"])
+    count += Number(product["countCrashRemastered"])
+    count += Number(product["countCrash4"])
 
     if(count != 0){
+        let countingPopUpli = document.getElementById("countingPopUp")
         countingPopUpli.style.display = "block"
+        countingPopUpli.innerHTML = Number(count) 
     }else{
         countingPopUpli.style.display = "none"
     }
@@ -48,66 +56,22 @@ function updateCount(){
 
 
 function addProduct1() {
-    if (!product.has("product1")){
-        product.set("product1", 1)
-    }else{
-        x = product.get("product1")
-        x++
-        product.set("product1", x)
-    }
+    product["countCrash1"]++
     updateCount()
-    log()
-    updatePopUp()
 }
 function addProduct2() {
-    if (!product.has("product2")){
-        product.set("product2", 1)
-    }else{
-        x = product.get("product2")
-        x++
-        product.set("product2", x)
-    }
+    product["countCrash2"]++
     updateCount()
-    log()
-    updatePopUp()
 }
 function addProduct3() {
-    if (!product.has("product3")){
-        product.set("product3", 1)
-    }else{
-        x = product.get("product3")
-        x++
-        product.set("product3", x)
-    }
+    product["countCrash3"]++
     updateCount()
-    log()
-    updatePopUp()
 }
 function addProduct4() {
-    if (!product.has("product4")){
-        product.set("product4", 1)
-    }else{
-        x = product.get("product4")
-        x++
-        product.set("product4", x)
-    }
+    product["countCrashRemastered"]++
     updateCount()
-    log()
-    updatePopUp()
 }
 function addProduct5() {
-    if (!product.has("product5")){
-        product.set("product5", 1)
-    }else{
-        x = product.get("product5")
-        x++
-        product.set("product5", x)
-    }
+    product["countCrash4"]++
     updateCount()
-    log()
-    updatePopUp()
-}
-
-function log() {
-    console.log(product + " " + count)
 }

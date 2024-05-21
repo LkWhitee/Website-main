@@ -646,43 +646,98 @@ span.cartCount {
     top: 2vh;
 }
 
-.buyConfirm div#content {
+.buyConfirm {
     display: flex;
     flex-direction: row;
     background-color: var(--textBg);
 }
 
-.buyConfirm div#content div {
+.buyConfirm div {
     display: inline-block;
     height: 80vh;
     width: 100%;
-
+    
     /*border: 10px solid red;*/
 }
 
-.buyConfirm div#content div:nth-child(1) {
+.buyConfirm div:nth-child(1) {
     border-right: 0.3vw solid rgb(6, 136, 183);
     
     background-color: azure;
     border-top-left-radius: 5.5vh;
     border-bottom-left-radius: 5.5vh;
 }
-.buyConfirm div#content div:nth-child(2) {
+.buyConfirm div:nth-child(2) {
     background-color: #12b9c2;
     border-top-right-radius: 5.5vh;
     border-bottom-right-radius: 5.5vh;
 }
+ul.orderedList {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    
+    list-style: none;
+    height: 60vh;
+    margin: 0px 1.5vw 0px 2vw;
+    
+    border-top: 0.3vh solid black;
+    border-bottom: 0.3vh solid black;
+}
+ul.orderedList li {
+    height: 6vh;
+    margin: 2.2vh 7vw 2vh 3vw;
+        
+}
+
+ul.orderedList li h3.text {
+    margin: 1vh 0px 0px 0px;
+    border-bottom: 0.2vh solid black;
+
+    font-size: 2vh;
+    text-align: left;
+}
+ul.orderedList li h4 {
+    display: inline;
+    margin: 0.5vh 0px 0px 0px;
+
+    font-size: 1.5vh;
+}
+
+ul.orderedList li img.box {
+    float: left;
+    
+    position: relative;
+    top: -0.4vh;
+    
+    height: 6vh;
+    width: 10vh;
+    scale: 1.2;
+    object-fit: cover;
+    
+    margin-right: 1vw;
+    border-radius: 2vh;
+}
+input.quantitySelector {
+    display: inline;
+    border: 0px;
+    background-color: inherit;
+    width: 5vw;
+}
+
+
 .buyConfirm form {
     height: 40vh;
     margin: 18vh 3vw 22vh 2vw;
     padding: 2vh 1vw 1vh 1vw;
     background-color: #a62cd6e4;
 }
+
 .buyConfirm fieldset {
     border: 0px
 }
 
-.buyConfirm input, .buyConfirm button {
+.buyConfirm form input, .buyConfirm form button {
     display: inline-block;
     margin: 0.2vw;
     font-size: 2vh;
@@ -693,6 +748,8 @@ span.cartCount {
     float: left;
     /*overflow: show;*/
     height: 1px;
+
+    font-size: 1.4vh;
 }
 
 .buyConfirm input[name="creditCardNumber"] {
