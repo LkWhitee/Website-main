@@ -13,8 +13,8 @@
         <ul>
             <li><a href="./../Index.html" lang="en"><button class="cssbuttons-io " lang="en"><span>Home</span></button></a></li>
             <li><a href="./news.html" lang="en"><button class="cssbuttons-io " lang="en"><span>News</span></button></a></li>
-            <li><a href="./characters.html"><button class="cssbuttons-io " lang="en"><span>Characters</span></button></a></li>
-            <li><button class="cssbuttons-io cartButton" lang="en"><span>Cart</span></button></li>
+            <li><a href="./story.html"><button class="cssbuttons-io " lang="en"><span>Story</span></button></a></li>
+            <li><button onclick="onlick()" class="cssbuttons-io cartButton" lang="en"><span>Cart</span></button><span id="countingPopUp" style="display: block;" class="cartCount"></span></li>
         </ul>
     </nav>
     <header class="small">
@@ -23,6 +23,14 @@
         <hr class="simple">
     </header>
     <main>
+
+        <section id="cartPopUp" class="buttonPopUp" style="display: none">
+            <div class="buttonContainer">
+                <button class="cssbuttons-io" onclick="onlick()"><span>X</span></button>
+            </div>
+            <iframe src="../pages/MiniBuy.html"></iframe>
+        </section>
+
         <section id="games" class="bg">
             <ul class="boList">
                 <li id="crash1" class="box">
@@ -96,6 +104,7 @@
     </footer>
 
     <script src="../js/BackToTheTop.js"></script>
+    <script src="../js/buy.js"></script>
     <script src="../js/buy.js"></script>
 </body>
 </html>

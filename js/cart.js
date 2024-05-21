@@ -1,0 +1,8 @@
+
+function onCartClickMini(){
+    
+}
+
+function onCartClick(){
+
+}
