@@ -8,14 +8,11 @@
     --AnimationNewsScaleStart: 1;
     --AnimationNewsScaleStop: 1.2;
     --AnimationNewsScaleTime: 500ms;
-    --StoryTextMargin: 3vh 3vh auto 3vh;
+
+    --textBg: azure;
 }
-p:focus {
-    outline: none;
-}
-h2:focus{
-    outline: none;
-}
+
+/*animazioni*/
 
 @keyframes newsHover {
     from {
@@ -52,6 +49,16 @@ h2:focus{
     }
 }
 
+/*custom fonts*/
+@font-face {
+    font-family: titleFont;
+    src: url(./fonts/Action\ Comics.ttf);
+}
+@font-face {
+    font-family: textFont;
+    src: url(./fonts/Roboto-Regular.ttf);
+}
+
 #index-d1 {
     top: -10vh;
 }
@@ -71,24 +78,28 @@ h2:focus{
     top: -68vh;
 }
 #homePageFooter {
-    bottom: -450vh;
+    bottom: -439vh;
 }
 
 body {
     margin: 0px;
     cursor: url(../imgs/misc/cursor.cur), auto;
+    background-color: black;
+}
+.bg {
     background-image: url(./../imgs/Background/BackBackground.png);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-/*-------------------Back to top -----------------(preso da internet e modificato)*/
+/*Presi da internet*/
 
+/*-------------------Back to top -----------------*/
 .Btn {
     z-index: 999;
-    width: 45px;
-    height: 45px;
+    width: 4vw;
+    height: 4vw;
     background: linear-gradient(#44ea76, #39fad7);
     display: none;
     align-items: center;
@@ -100,15 +111,12 @@ body {
     bottom: 3vh;
     right: 2vw;
   }
-  
   .arrow path {
     fill: white;
   }
-  
   .Btn:hover .arrow {
     animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
   }
-  
   @keyframes slide-in-bottom {
     0% {
       transform: translateY(10px);
@@ -121,12 +129,9 @@ body {
     }
   }
   
-  
-
-/*-------------- Scroll bar --------------- (presa da internet e modificata)*/
-
+/*-------------- Scroll bar --------------- */
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 0.3vw;
   }
   
   /* Track */
@@ -144,170 +149,11 @@ body {
     background: #986c22; 
   }
 
-
-
-/*------------------ GENERICO ---------------*/
-
-/*-------------- HEADER ------------------*/
-header {
-    margin: 0px;
-    background-image: url(./../imgs/header/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-header.main img {
-    display: block;
-    margin-left: 35vw;
-    margin-right: 35vw;
-    padding: 10vh 0px 5vh 0px;
-    width: 30vw;
-}
-header.main ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0px;
-    padding-bottom: 15vh;
-    margin: 0px;
-}
-header.main li {
-    margin: 3vw;
-}
-
-/*
-header.small {
-    background-position: top;
-}
-*/
-header.small img {
-    margin: 7vh 0px 0px 5vw;
-    width: 20vw;
-    height: 17vh;
-}
-header.small h1 {
-    margin: 0px;
-    
-    color: rgb(0, 98, 255);
-    padding: 1vh;
-    font-family: Impact, 'Arial Narrow Bold', sans-serif;
-    font-size: 5vh;
-    font-weight: lighter;
-    text-align: center;
-}
-
-/*-------------- NAV BAR ------------------*/
-nav {
-    display: block;
-    position: sticky;
-    top: 0px;
-    right: 0px;
-    float: right;
-    margin-top: 3vh;
-    background-color: azure;
-    border-top-left-radius: 6vh;
-    border-bottom-left-radius: 6vh;
-    z-index: 1000;
-    width: 37vw;
-    min-width: 400px;
-}
-nav ul {
-    margin: 0.0px;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    padding: 1.5vh 3vw 1.5vh 0.5vw;
-}
-nav li {
-    align-items: center;
-}
-nav a {
-    cursor: inherit;
-}
-nav span.thispage {
-    display: inline-block;
-    background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
-    border: 0.2vw solid rgb(6, 136, 183);
-    border-radius: 6vh;
-    box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0,0,0,0.75);
-    width: 7.5vw;
-    height: 4.5vh;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    text-align: center;
-    font-family: "Arial Black", Helvetica, sans-serif;
-    font-size: 2.7vh;
-    color: whitesmoke;
-    text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
-}
-
-/*------------------------- Buttons ------------------ (preso da internet e modificata)*/
-
-nav .cssbuttons-io {
-    position: relative;
-    font-weight: 500;
-    font-size: 3vh;
-    letter-spacing: 0.05em;
-    cursor: inherit;
-    border: none;
-    background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
-    color: rgb(0, 0, 0);
-    overflow: hidden;
-}
-nav button.cssbuttons-io {
-    width: 8vw;
-    height: 5vh;
-    border: 0.3vw solid rgb(6, 136, 183);
-    box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0,0,0,0.75);
-    border-radius: 6vh;
-    min-width: 100px;
-}
-nav .cssbuttons-io span {    
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-    display: inline-flex;
-    align-items: center;
-    padding: 0.3vh 0.3vw 0.3vh 0.3vw;
-    font-family: "Arial Black", Helvetica, sans-serif;
-    font-size: 2.5vh;
-    color: whitesmoke; 
-    text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
-}
-nav .cssbuttons-io::before, .cssbuttons-io::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-  
-nav .cssbuttons-io::before {
-    content: "";
-    background: azure;
-    
-    width: 120%;
-    left: -10%;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-}
-  
-nav .cssbuttons-io:hover::before {
-    transform: translate3d(100%, 0, 0);
-}
-  
-nav .cssbuttons-io:active {
-    transform: scale(0.95);
-}
+/* -------- custom button --------------------------*/
 
 .cssbuttons-io {
     position: relative;
-    font-weight: 500;
-    font-size: 18px;
-    letter-spacing: 0.05em;
-    cursor: inherit;
-    border: none;
+    font-size: 5vh;
     background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
     color: rgb(0, 0, 0);
     overflow: hidden;
@@ -339,7 +185,6 @@ button.cssbuttons-io {
     height: 100%;
     z-index: 0;
 }
-
 .cssbuttons-io::before {
     content: "";
     background: azure;
@@ -349,13 +194,104 @@ button.cssbuttons-io {
     transform: skew(30deg);
     transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
 }
-
 .cssbuttons-io:hover::before {
     transform: translate3d(100%, 0, 0);
 }
-
 .cssbuttons-io:active {
     transform: scale(0.95);
+}
+
+/*-------------- HEADER ------------------*/
+header {
+    margin: 0px;
+    background-image: url(./../imgs/header/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header.main img {
+    display: block;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    padding: 10vh 0px 5vh 0px;
+    width: 30vw;
+}
+header.main ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    padding-bottom: 15vh;
+    margin: 0px;
+}
+header.main li {
+    margin: 3vw;
+}
+
+header.small img {
+    margin: 7vh 0px 0px 5vw;
+    width: 20vw;
+    height: 17vh;
+}
+header.small h1 {
+    margin: 0px;
+    
+    color: rgb(0, 98, 255);
+    padding: 1vh;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-size: 5vh;
+    font-weight: lighter;
+    text-align: center;
+}
+
+/*-------------- NAV BAR ------------------*/
+nav {
+    display: block;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    float: right;
+    margin-top: 3vh;
+    background-color: azure;
+    border-top-left-radius: 6vh;
+    border-bottom-left-radius: 6vh;
+    z-index: 1000;
+    width: 40vw;
+}
+nav ul {
+    margin: 0.0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    padding: 1.5vh 3vw 1.5vh 0.5vw;
+}
+nav span.thispage {
+    display: inline-block;
+    background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
+    border: 0.2vw solid rgb(6, 136, 183);
+    border-radius: 6vh;
+    box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0,0,0,0.75);
+    width: 7.5vw;
+    height: 4.5vh;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-align: center;
+    font-family: "Arial Black", Helvetica, sans-serif;
+    font-size: 2.7vh;
+    color: whitesmoke;
+    text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
+}
+nav .cssbuttons-io {
+    font-size: 1vh;
+}
+nav button.cssbuttons-io {
+    width: 8vw;
+    height: 5vh;
+}
+nav .cssbuttons-io span {
+    font-size: 2.3vh;
+    text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
 }
 
 /*------------- DIVISORI ---------------*/
@@ -379,12 +315,24 @@ hr.simple {
     border-bottom: 1vh solid white;
 }
 
+/* Classi generiche*/
+
 .box {
     border: 0.3vw solid rgb(6, 136, 183);
     box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0,0,0,0.75);
     border-radius: 6vh;
 }
 
+.title {
+    font-family: titleFont, Arial, Helvetica, sans-serif;
+    font-size: 4vh;
+}
+
+.text {
+    font-family: textFont, Arial, Helvetica, sans-serif;
+    text-align: justify;
+    font-size: 3vh;
+}
 
 /*------------- Footer -------------*/
 
@@ -401,23 +349,23 @@ footer.main {
     position: absolute;
     right: 0px;
     left: 0px;
-    height: 90vh;
+    min-height: 90vh;
     width: 100%;
     background-color: black;
     color: white;
 }
 footer.main img {
     position: relative;
-    width: 30vw;
+    width: 30%;
     scale: 1.3;
-    margin: 0px 34% auto 35%;
+    margin: 0px 32% 0px 38%;
 }
 
 footer.simple {
     position: absolute;
     right: 0px;
     left: 0px;
-    height: 72vh;
+    min-height: 72vh;
     width: 100%;
     background-color: black;
     color: white;
@@ -425,8 +373,9 @@ footer.simple {
 footer.simple img {
     position: relative;
     scale: 1.3;
+    width: 20%;
     top: -8vh;
-    margin: 0px 34% 0px 39%;
+    margin: 0px 38% 0px 42%;
 }
 footer.simple p {
     position: relative;
@@ -438,16 +387,15 @@ footer.simple p {
 .newsBox {
     position: relative;
     
-    padding: 10vh 5vw 20vh 5vw;
+    padding: 10vh 0px 20vh 0px;
     
     background-image: url("./../imgs/Background/generic-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    
+
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: center;
 } 
 .newsBox ul {
     list-style: none;
@@ -458,81 +406,61 @@ footer.simple p {
 .newsBox li {
     padding: 2vh 1vw 2vh 1vw;
     z-index: 200;
-    display: block;
-    height: 50vh;
-    width: 18vw;
+    min-height: 50vh;
+    width: 22vw;
     overflow: hidden;
-    scrollbar-width: 0px;
-    /*
-    min-width: 400px;
-    min-height: 600px;
-    */
-    background-color: rgb(27, 158, 158);
+    background-color: var(--textBg);                                            /*>modificare forse<*/
 
     -webkit-animation: newsHover-off var(--AnimationNewsScaleTime);
 }
 .newsBox li:hover{
-    animation: newsHover;
-    animation-duration: var(--AnimationNewsScaleTime);
+    animation: newsHover var(--AnimationNewsScaleTime);
     transform: scale(var(--AnimationNewsScaleStop));
-    z-index: 998;
-}
-.newsBox h2{
-    font-size: 5vh;
-    text-align: center;
-}
-.newsBox p {
-    text-align: justify;
-    font-size: 1.6vh;
+    z-index: 300;
 }
 .newsBox img{
-    border-bottom: rgb(6, 136, 183) 2px solid ;
+    border-bottom: rgb(6, 136, 183) 0.27vw solid ;
     width: 100%;
-    height: 18vh;
-    scale: 1.2;
+    height: 24vh;
+    scale: 1.3;
     object-fit: cover;
     margin-bottom: 2vh;
 }
-
+.newsBox .title {
+    text-align: center;
+}
+.newsBox .text {
+    font-size: 2.3vh;
+}
 
 /*Story*/
 
-.story {
+section.story {
     position: relative;
-    background-color: #986d227d;
-    width: 100%;
+    padding: 20vh 0px 30vh 0px;
 }
-.story div[id="popUp"]{
-    background-color: rgb(27, 158, 158);
-    width: 50%;
-    height: 80vh;
-    float: right;
-    margin: 20vh auto 30vh 40%;
-    border-radius: 0%;
+.story div#popUp {
+    background-color: var(--textBg);
+    margin-left: 45%;
+    width: auto;
+    min-height: 60vh;
     border-right: 0px;
-    border-top-left-radius: 8vh;
-    border-bottom-left-radius: 8vh;
-
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
-.story div[id="Buttons"]{
-    
-    position: absolute;
-    bottom: 0px;
-    margin: auto auto 3% 3%;   
-    display: inline;
+.story div#Buttons {
+    position: static;
+    margin: 16vh auto 3vh 2vw;   
 }
-.story div[id="Buttons"] button.cssbuttons-io {
-        width: 8vh;
-        height: 8vh;
+.story div#Buttons button.cssbuttons-io {
+    width: 8vh;
+    height: 8vh;
 }
-.story h2{
-    margin: var(--StoryTextMargin);
-    font-size: 6vh;
-    
+.story .title {
+    margin: 3vh 0px 0px 3vh;
 }
-.story p{
-    margin: var(--StoryTextMargin);
-    font-size: 4vh;
+.story .text{
+    margin: 3vh 3vh 0px 3vh;
 }
 
 /*Gadgets*/
@@ -544,9 +472,8 @@ footer.simple p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 30vh 0vw 30vh;
+    padding: 25vh 0vw 25vh 0px;
 }
-
 .gadgets {
     margin: auto auto auto 35vw;
     list-style: none;
@@ -555,19 +482,14 @@ footer.simple p {
     gap: 2vh;
     flex-direction: row;
 }
-
 .gadgets li{
     width: 30vw;
     height: 30vh;
-    background-color: azure;
-    
 }
-
 .gadgets li img{
     size: auto;
     -webkit-animation: gadgetHover-off var(--AnimationNewsScaleTime)
 }
-
 .gadgets li:hover img {
     animation: gadgetHover var(--AnimationNewsScaleTime);
     translate: 0 -2vh;
@@ -577,67 +499,150 @@ footer.simple p {
 
 /*--------------- Buy page e news page-------------------*/
 
-.centerCirca {
-    padding: 5vh 7vw 15vh 7vw;
-}
-
 ul.boList {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10vh;
+    padding: 5vh 7vw 15vh 7vw;
 }
 ul.boList li {
-    background-color: rgb(27, 158, 158);
+    background-color: var(--textBg);
 }
-
-ul.boList li:nth-child(even) img {
-    float: left;
+ul.boList li img {
     width: 40vw;
     height: 50vh;
     object-fit: cover;
-    margin-right: 3vw;
     scale: 1.1;
+}
+ul.boList li:nth-child(even) img {
+    float: left;
+    margin-right: 3vw;
 }
 ul.boList li:nth-child(odd) img {
     float: right;
-    width: 40vw;
-    height: 50vh;
-    object-fit: cover;
     margin-left: 3vw;
-    scale: 1.1;
 }
-
-ul.boList h2 {
-    font-size: 7vh;
+ul.boList .title {
     text-align: center;
 }
-ul.boList p {
-    font-size: 3vh;
-    text-align: justify;
-    margin: auto 2% auto 2%;
+ul.boList .text {
+    margin: 0px 1vw 0px 1vw;
 }
 
+.boList li:nth-child(odd) .buttonContainer {
+    float: left;
+    margin: 0px 0px 1vh 1vw;
+}
+.boList li:nth-child(even) .buttonContainer {
+    float: right;
+    margin: 0px 1vw 1vh 0px ;
+}
+
+.buttonContainer#crash1Bc,
+.buttonContainer#crash3Bc {
+    margin-top: 1vh;
+}
+.buttonContainer#crash2Bc {
+    margin-top: 5vh;
+}
+.buttonContainer#crashRemasteredBc {
+    margin-top: 15vh;
+}
+.buttonContainer#crash4Bc {
+    margin-top: 12vh;
+}
+
+button.cssbuttons-io.buyButton {
+    font-size: 1vh;
+}
+button.cssbuttons-io.buyButton {
+    width: 15vw;
+    height: 7vh;
+}
+button.cssbuttons-io.buyButton span {   
+    font-size: 3vh;
+    text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
+}
+
+.miniBuy ul.boList {
+    padding: 20vh 7vw 15vh 7vw;
+}
+.miniBuy#cartZone {
+    z-index: 1000;
+    position: fixed;
+    width: 26%;
+    margin: 0px 37% 0px 37%;
+    padding: 2vh 0px 1vh 0px;
+    background-color: var(--textBg);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: 0px;
+
+    display: flex;
+    justify-content: center;
+}
+.miniBuy#cartZone button.cssbuttons-io {
+    width: 9vw;
+    height: 8vh;
+}
+
+button.cartButton.cssbuttons-io {
+    background: linear-gradient(to top, #9b20cc, rgb(107, 0, 173));
+}
+button.cartButton.cssbuttons-io::before {
+    background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
+}
 
 /* --------------- Story Page --------------*/
 section.Story-Story {
-    position: relative;
-    height: 120vh;
+    padding: 10vh 10% 20vh 10%;
 }
-.Story-Story div{
-    margin: 10vh auto auto auto;
-    height: 100vh;
-    scale: 0.8;
-    background-color: #246ea4;
+.Story-Story div {
+    min-height: 50vh;
+    background-color: var(--textBg);
 }
-
-.Story-Story h2 {
-    font-size: 10vh;
+.Story-Story .title {
     text-align: center;
 }
+.Story-Story .text {
+    margin: 1vh 1vw 3vh 1vw;
+}
 
-.Story-Story p {
-    font-size: 4vh;
-    margin: 10px 1.5% 1.5% 1.5%;
-    text-align: justify;
+/* PopUp */
+.buttonPopUp {
+    z-index: 10000;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.797);
+    width: 100%;
+    height: 100vh;
+}
+.buttonPopUp iframe {
+    margin: 10vh 12% 10vh 12%;
+    width: 76%;
+    height: 80vh;
+    border-radius: 6vh;
+    border: 0.3vw solid gray;
+    box-shadow: 0px 0px 10vw;
+}
+.buttonPopUp button.cssbuttons-io {
+    width: 8vh;
+    height: 8vh;
+}
+.buttonPopUp .buttonContainer {
+    position: absolute;
+    right: 2vw;
+    top: 2vh;
+}
+
+#countingPopUp li{
+    position: absolute;
+    margin: 0vh 0vh 0vh 89%;
+    height: 20px;
+    width: 20px;
+    background-color: #ed0404;
+    text-align: center;
+    color: aliceblue;
+    border-radius: 50%;
 }
