@@ -11,6 +11,7 @@
         <section id="cartZone" class="box miniBuy">
             <button class="cssbuttons-io cartButton" onclick="onlick()" lang="en"><span>Cart</span></button><span id="countingPopUp" style="display: block;" class="cartCount"></span>
         </section>
+        <hr class="simple">
 
         <section id="confirmBuy" class="buttonPopUp" style="display: none">
             <div class="buttonContainer">
@@ -19,7 +20,7 @@
 
             <div id="content" class="buyConfirm">
                 <div>
-                    <h2 class="title" lang="en">YOUR CART</h2>
+                    <h2 class="title" lang="en">CART</h2>
                     <ul class="orderedList">
                         <li id="buyCrash1">
                             <img src="./../imgs/CrashGames/crash1.jpeg" alt="Crash Bandicoot 1" class="box">
@@ -47,36 +48,28 @@
                             <h4>Quantità:</h4> <input class="quantitySelector" onchange="valueChange('countCrash4', this.value)" type="number" id="countCrash4" name="countCrash4" min="0" max="99" >
                         </li>
                     </ul>
-                    <p>
-                        Totale: <span id="total">1000</span>
-                    </p>
                 </div>
                 <div>
                     <form action="" method="get" class="box">
                         <fieldset>
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" placeholder="Antonio">
-                            <label for="surname">Cognome</label>
-                            <input type="text" id="surname" name="surname" placeholder="Masiero">
-                            <label for="bornDate">Data di nascita</label>
-                            <input type="date" id="bornDate" name="bornDate">
-                            <label for="address">Indirizzo</label>
-                            <input type="text" id="address" name="address" placeholder="via Roma">
-                            
-                            <label for="creditCardNumber">Numero di carta</label>
-                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="XXXX-XXXX-XXXX-XXXX">
-                            <label for="ccv">CVV</label>
-                            <input type="text" id="ccv" name="ccv" placeholder="XXX">
-                            <label for="outDate">Data di scadenza</label>
-                            <input type="date" id="outDate" name="outDate">
-                            <button type="submit"> COMPRA </button>
+                            <legend class="text">Dati personali</legend>
+                            <input type="text" id="name" name="name" placeholder="Nome" required>
+                            <input type="text" id="surname" name="surname" placeholder="Cognome" required>
+                            <input type="text" id="address" name="address" placeholder="indirizzo" required>
+                            <input type="date" id="bornDate" name="bornDate" required>
                         </fieldset>
+                        <fieldset>
+                            <legend class="text">Dati della carta</legend>
+                            <input type="text" id="creditCardNumber" name="creditCardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                            <input type="text" id="ccv" name="ccv" placeholder="CCV" required>
+                            <input type="date" id="outDate" name="outDate" required>
+                        </fieldset>
+                        <button type="submit" class="cssbuttons-io"><span>COMPRA</span></button>
                     </form>
                 </div>
             </div>
         </section>
-
-        <hr class="simple">
+        
         <section id="games" class="bg miniBuy">
             <ul class="boList">
                 <li id="crash1" class="box">

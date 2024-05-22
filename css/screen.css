@@ -11,7 +11,6 @@
 
     --textBg: azure;
 }
-
 /*animazioni*/
 
 @keyframes newsHover {
@@ -63,6 +62,7 @@
     src: url(./fonts/Action\ Comics\ Black.ttf);
 }
 
+/*Elementi traslati*/
 #index-d1 {
     top: -10vh;
 }
@@ -97,7 +97,7 @@ body {
     background-size: cover;
 }
 
-/*Presi da internet*/
+/*Presi da internet e leggermente modificati*/
 
 /*-------------------Back to top -----------------*/
 .Btn {
@@ -211,6 +211,7 @@ header {
     background-size: cover;
     background-position: center;
 }
+/*header estesa*/
 header.main img {
     display: block;
     margin-left: 35vw;
@@ -234,6 +235,7 @@ header.main button.cssbuttons-io {
     height: 10vh;
 }
 
+/*header "piccla" */
 header.small img {
     margin: 7vh 0px 0px 5vw;
     width: 20vw;
@@ -415,7 +417,7 @@ footer.simple p {
     min-height: 50vh;
     width: 22vw;
     overflow: hidden;
-    background-color: var(--textBg);                                            /*>modificare forse<*/
+    background-color: var(--textBg);
 
     -webkit-animation: newsHover-off var(--AnimationNewsScaleTime);
 }
@@ -536,6 +538,8 @@ ul.boList .text {
     margin: 0px 1vw 0px 1vw;
 }
 
+/*modifiche della lista per le pagine di aqcuisto*/
+
 .boList li:nth-child(odd) .buttonContainer {
     float: left;
     margin: 0px 0px 1vh 1vw;
@@ -571,6 +575,8 @@ button.cssbuttons-io.buyButton span {
     text-shadow: 0.2vh 0.2vh #558abb, -0.2vh -0.2vh #558abb, 0.2vh -0.2vh #558abb, -0.2vh 0.2vh #558abb;
 }
 
+/*modifiche per la pagina del minibuy*/
+
 .miniBuy ul.boList {
     padding: 20vh 7vw 15vh 7vw;
 }
@@ -599,6 +605,8 @@ button.cartButton.cssbuttons-io {
 button.cartButton.cssbuttons-io::before {
     background: linear-gradient(to top, #246ea4, rgb(6, 136, 183));
 }
+
+/*Stile del contatore di oggetti acquistati*/
 
 span.cartCount {
     float: right;
@@ -635,7 +643,6 @@ span.cartCount {
     border: 0.3vw solid gray;
     box-shadow: 0px 0px 10vw;
 }
-
 .buttonPopUp button.cssbuttons-io {
     width: 8vh;
     height: 8vh;
@@ -646,20 +653,17 @@ span.cartCount {
     top: 2vh;
 }
 
+/*zona del pagamento con il carretto*/
+
 .buyConfirm {
     display: flex;
     flex-direction: row;
     background-color: var(--textBg);
 }
-
 .buyConfirm div {
-    display: inline-block;
     height: 80vh;
     width: 100%;
-    
-    /*border: 10px solid red;*/
 }
-
 .buyConfirm div:nth-child(1) {
     border-right: 0.3vw solid rgb(6, 136, 183);
     
@@ -672,6 +676,8 @@ span.cartCount {
     border-top-right-radius: 5.5vh;
     border-bottom-right-radius: 5.5vh;
 }
+
+/*Lista degli oggetti acquistati*/
 ul.orderedList {
     display: flex;
     flex-direction: column;
@@ -689,7 +695,6 @@ ul.orderedList li {
     margin: 2.2vh 7vw 2vh 3vw;
         
 }
-
 ul.orderedList li h3.text {
     margin: 1vh 0px 0px 0px;
     border-bottom: 0.2vh solid black;
@@ -698,12 +703,11 @@ ul.orderedList li h3.text {
     text-align: left;
 }
 ul.orderedList li h4 {
-    display: inline;
+    display: inline-block;
     margin: 0.5vh 0px 0px 0px;
 
     font-size: 1.5vh;
 }
-
 ul.orderedList li img.box {
     float: left;
     
@@ -718,56 +722,80 @@ ul.orderedList li img.box {
     margin-right: 1vw;
     border-radius: 2vh;
 }
+
+/*Stile del inputfield per cambiare il numero di oggetti acquistati*/
+
 input.quantitySelector {
     display: inline;
     border: 0px;
     background-color: inherit;
-    width: 5vw;
+    min-width: 3vw;
+    height: 3vh;
+    font-size: 2vh;
+    margin: 0px;
 }
 
+/*stile del form per mettere i dati*/
 
 .buyConfirm form {
-    height: 40vh;
+    min-height: 40vh;
     margin: 18vh 3vw 22vh 2vw;
     padding: 2vh 1vw 1vh 1vw;
     background-color: #a62cd6e4;
-}
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .buyConfirm fieldset {
-    border: 0px
-}
+    border: 0.2vw solid rgb(50, 159, 199);
+    border-radius: 2vh;
 
+    margin: 3vh 0px 3vh 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.buyConfirm fieldset legend {
+    font-size: 2vh;
+}
 .buyConfirm form input, .buyConfirm form button {
     display: inline-block;
     margin: 0.2vw;
     font-size: 2vh;
     padding: 0.5vh 1vw 0.5vh 1vw;
     border-radius: 6vh;
+    border: 0px;
 }
 .buyConfirm label {
     float: left;
     /*overflow: show;*/
-    height: 1px;
+    height: 0px;
 
     font-size: 1.4vh;
 }
-
+.buyConfirm input[name="name"], .buyConfirm input[name="surname"] {
+    width: 10vw;
+}
 .buyConfirm input[name="creditCardNumber"] {
-    width: 29.5vw;
+    width: 28vw;
 }
-.buyConfirm input[name="ccv"] {
-    width: 2.9vw;
-}
-.buyConfirm input[name="outDate"] {
-    margin-left: 14.8vw;
-    width: 9.2vw
-}
-.buyConfirm button {
-    position: absolute;
-    bottom: 28.5vh;
-    right: 26.5vw;
+.buyConfirm button.cssbuttons-io {
+    min-width: 20vw;
 
-    font-family: titleFont;
     padding: 0vh 0.8vw 0vh 0.7vw;
     box-shadow: 0.3vw 0.3vw 2vh 0.1vh rgba(0, 0, 0, 0.858);
+}
+.buyConfirm button.cssbuttons-io:hover span{
+    color: azure;
+}
+
+.buyConfirm button.cssbuttons-io span {
+    font-size: 2vh;
+    font-family: titleFont;
+    color: #558abb;
+    text-shadow: none;
+}
+.buyConfirm h2 {
+    text-align: center;
 }
